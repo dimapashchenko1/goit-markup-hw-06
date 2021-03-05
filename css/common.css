@@ -1,0 +1,405 @@
+/* Главный шрифт документа */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding-top: 80px;
+   
+}
+a {
+    text-decoration: none;
+  }
+
+ul {
+    list-style: none;
+}
+
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+a,
+p,
+ul,
+li {
+    display: inline-block;
+    margin: 0px;
+    padding: 0px;
+}
+pre {
+    margin: 0px;
+    padding: 0px;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0px;
+    padding: 0px;
+  
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
+
+/* Container */
+.container {
+    width: 1200px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    }
+
+    
+/* ===HEADER=== */
+.header {
+    background-color: var(--white-text);
+    box-sizing: content-box;
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 80px;
+    border-bottom: 1px solid;
+    border-color: var(--grey-border);
+    
+}
+
+.nav,
+.nav-links,
+.nav-contact {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    
+}
+.nav-logo {
+    padding-top: 24px;
+    padding-bottom: 24px;
+}
+
+.nav-logo {
+    font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 26px;
+    line-height: 1.19;
+    letter-spacing: 0.03em;
+    color: var(--black-text-logo);
+}
+
+.nav-logo .colortext {
+    color: var(--blue-text)
+}
+/* Стили шапки */
+
+.nav-links {
+    max-width: 294px;
+    max-height: 16px;
+    margin-left: 93px;
+
+    transition: var(--transition-function);
+    }
+    
+
+.nav-link.current{
+    color: var(--blue-text);
+    position: relative;
+}
+
+
+.nav-link.current::after{
+    content: '';
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color: var(--blue-text);
+    border-radius: 2px;
+    bottom: -1px;
+}
+
+
+.nav-links > li {
+    margin-right: 50px;
+}
+
+.nav-link {
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    color: var(--black-text);
+
+    transition: var(--transition-function);
+}
+
+
+.icon-mail,
+.icon-tell {
+    margin-right: 10px;
+}
+
+.nav-contact {
+    box-sizing: content-box;
+    margin-left: 305px;
+}
+
+.list-contact {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.list-contact .nav-link {
+    display: flex;
+    align-items: center;
+}
+
+.nav-contact > li:first-child {
+    margin-right: 30px;
+}
+
+
+.nav-link:hover, .nav-link:focus {
+    color: var(--blue-text);
+    transition: var(--transition-function);
+    
+}
+
+.nav-contact .nav-link {
+    color: var(--grey-text);
+}
+
+
+.nav-contact .nav-link:hover, .nav-contact .nav-link:focus {
+    color: var(--blue-text);
+    transition: var(--transition-function);
+}
+
+.nav-contact {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+ }
+
+
+.contact-svg{
+    fill: var(--accent-text);
+    margin-right: 10px;
+    fill:  currentColor;
+    
+}
+
+
+/* Стили Футера */
+.footer-main {
+    background-color: var(--black-background);
+}
+
+.footer {
+    display: flex;
+    align-items: baseline;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+
+.address {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.address-logo {
+    font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 26px;
+    line-height: 31px;
+    letter-spacing: 0.03em;
+    color: var(--white-text);
+}
+
+.colortext {
+    color: var(--blue-text)
+}
+
+.address-text {
+    margin-top: 20px;
+    margin-bottom: 0px;
+}
+
+.contacts {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.address-text {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.03em;
+    color: var(--white-text);
+}
+.address-contact {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.03em;
+    color: var(--white-text-op60);
+}
+
+.address-contact {
+    margin-top: 9px;
+    margin-bottom: 0px;
+}
+
+
+.footer-first {
+    margin-right: 70px;
+}
+
+.footer-second-title {
+    margin: 0px;
+    padding: 0px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    line-height: calc(16 / 14);
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+
+    color: var(--white-text);
+}
+
+.footer-second-menu:not(:last-child) {
+    margin-right: 10px;
+}
+  
+.footer-second-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    width: 44px;
+    height: 44px;
+    color: var(--white-text);
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    transition: var(--transition-function);
+}
+  
+.footer-second-item:hover,
+.footer-second-item:focus {
+    background-color: var(--accent-text);
+    border-radius: 50%;
+    color: var(--white-text);
+    transition: var(--transition-function);
+}
+  
+.footer-second-svg {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+  }
+  
+.footer-second-name,
+.footer-second-menu {
+    display: flex;
+}
+
+.footer-form {
+    margin-left: 93px;
+}
+    
+.footer-form-title {
+    margin-bottom: 20px;
+    font-size: 14px;
+    line-height: calc(16 / 14);
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+
+    color: var(--white-text);
+}
+
+.footer-form-box,
+.footer-form-thumb {
+    display: flex;
+}
+
+.form-thumb-input {
+    width: 358px;
+    height: 50px;
+    padding: 15px 16px;
+
+    color: var(--white-text);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-sizing: border-box;
+    border-radius: 4px;
+
+    background: transparent;
+    transition: border-color var(--transition-function);
+}
+
+
+.form-thumb-input:focus {
+    outline: none;
+    border-color: var(--accent-text);
+}
+
+
+.form-btn {
+    font-family: Roboto;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: calc(30 / 16);
+    letter-spacing: 0.06em;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+
+    position: relative;
+    padding-top: 10px 28px;
+    width: 200px;
+
+    display: flex;
+    padding: 10px 28px;
+    margin-left: 12px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--accent-text);
+    
+    color: var(--white-text)
+}
+
+.form-svg {
+    position: absolute;
+    margin-left: 10px;
+    right: 28px;
+    /* z-index: 1; */
+    top: 13px;
+    width: 24px;
+    height: 24px;
+}
+
+
