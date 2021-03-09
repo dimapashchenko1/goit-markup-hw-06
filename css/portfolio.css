@@ -77,6 +77,8 @@ main {
     margin-top: var(--list-gap);
     border: 1px solid;
     border-color: var(--grey-border);
+    transition: var(--transition-function);
+
 }
 
 .poster-pack {
@@ -137,7 +139,7 @@ main {
 
     opacity: 1;
     transition: var(--transition-function);
-    transform: translateY(100%);
+    transform: translateY(101%);
     z-index: 1;
 }
 
@@ -157,14 +159,14 @@ main {
     opacity: 1;
     transform: translateY(0);
     z-index: 2;
-    transition: transform var(--transition-function);
+    transition: var(--transition-function);
     
     
 }
 
 .poster-list:hover,
 .poster-list:focus {
-    transition: transform var(--transition-function);
+    transition: var(--transition-function);
     box-shadow:
     0px 1px 1px rgba(0, 0, 0, 0.12),
     0px 4px 4px rgba(0, 0, 0, 0.06),
