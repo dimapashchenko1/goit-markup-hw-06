@@ -117,13 +117,23 @@ main {
     border-radius: 50%;
     transition: var(--transition-function);
 }
+.hero-close-svg {
+    transition: fill var(--transition-function);
+}
       
-.hero-close:hover,
-.hero-close:focus {
-    outline: none;
-    background-color: var(--accent-text);
+.hero-close-svg:hover,
+.hero-close-svg:focus {
+    /* outline: none; */
+    fill: var(--accent-text);
     transition: var(--transition-function);
 }
+
+
+.hero-close:active {
+    outline: none;
+}
+
+
 
 .modal-title {
     margin: 0;
@@ -226,20 +236,32 @@ main {
     justify-content: center;
     align-items: center;
 } */
-
-.checkbox {
-    appearance: none;
-    position: absolute;
-
-    
+.check {
+    margin: 20px 0 30px 12px;
 }
 
 .label-check {
-    display: inline-block;
-
+    display: flex;
+    align-items: center;
 }
 
-.icon-check {
+.checkbox {
+    position: absolute;
+    -webkit-appearance:none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.checkbox {
+    width: 16px;
+    height: 15px;
+    border: 2px solid var(--black-text);
+    border-radius: 2px;
+}
+
+
+
+/* .icon-check {
     position: relative;
     display: inline-block;
     width: 16px;
@@ -248,16 +270,29 @@ main {
     border-radius: 4px;
 
     transition: var(--transition-function);
-   
-   
+} */
+
+.checkbox-icon {
+    cursor: pointer;
+    fill: none;
+    /* border: 2px solid var(--main-text); */
+    transition: fill var(--transition-function),
+    opacity var(--transition-function);
+    opacity: 0;
+    z-index: 1;
 
 }
 
-.checkbox:checked +.icon-check {
+.checkbox:checked ~ .checkbox-icon {
+    opacity: 1;
+    border: none; 
+}
+
+.checkbox:checked ~ .icon-check {
     
     border-color: var(--accent-text);
     background-color: var(--accent-text);
-    background-image: url("../images/icons.svg#email-modal");
+    background-image: url("./images/icons.svg#check-modal");
     background-size: contain;
     background-origin: border-box;
 
@@ -277,7 +312,7 @@ main {
     color: var(--white-text);
     background-color: var(--accent-text);
 
-    margin-top: 30px;
+    
     border-radius: 4px;
     padding: 10px 55px;
     min-width: 200px;
